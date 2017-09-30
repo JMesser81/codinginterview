@@ -48,11 +48,11 @@ bool isCharsUnique(string str)
 
 bool isCharsUnique_comp(string str)
 {
-   for (int i = 0; i < str.length(); i++)
+   for (unsigned int i = 0; i < str.length(); i++)
    {
       char test = str.at(i);
       cout << "Test char: " << test << endl;
-      for (int j = i + 1; j < str.length(); j++)
+      for (unsigned int j = i + 1; j < str.length(); j++)
       {
          if (test == str.at(j)) return false;
       }
@@ -66,7 +66,7 @@ bool isCharsUnique_bitvec(string str)
 {
    int val;
    int checker = 0;
-   for (int i = 0; i < str.length(); i++)
+   for (unsigned int i = 0; i < str.length(); i++)
    {
       val = str.at(i) - 'a';
       if (checker & (1 << val)) return false;

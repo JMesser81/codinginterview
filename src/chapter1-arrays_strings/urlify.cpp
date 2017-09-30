@@ -4,7 +4,7 @@
 using namespace std;
 string urlify(string, int);
 
-int main(int argc, char* argv[])
+int main()
 {
 	string input = "Misty and laoak dkjaldsf ";
 	int true_length = input.length();
@@ -21,7 +21,7 @@ string urlify(string input, int true_length)
 	// replace ' ' with '%20' 
 	// how much extra room is needed? 3x for each space for 
 	int numspaces = 0;
-	for (int i = 0; i < input.length(); i++)
+	for (unsigned int i = 0; i < input.length(); i++)
 	{
 		if (input[i] == ' ')
 		{

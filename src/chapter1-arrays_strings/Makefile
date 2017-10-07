@@ -3,7 +3,7 @@ CFLAGS = -std=c++14 -Wall -Wextra
 
 SRCS = $(wildcard *.cpp)
 OBJS = $(patsubst %.cpp, %.o, $(SRCS))
-BINS = isunique urlify checkpermutation
+BINS = isunique urlify checkpermutation palindromepermutation
 
 all: $(BINS)
 
@@ -14,6 +14,9 @@ urlify: urlify.o
 	@$(CC) $^ -o $@
 
 checkpermutation: checkpermutation.o
+	@$(CC) $^ -o $@
+
+palindromepermutation: palindrome-permutation.o
 	@$(CC) $^ -o $@
 
 $(OBJS): $(SRCS)

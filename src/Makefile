@@ -9,6 +9,7 @@ all: $(TARGETS)
 build:
 	@echo "Building project"
 	cd chapter1-arrays_strings && make
+	cd chapter2-linkedlists && make
 
 .PHONY: clean
 clean:
